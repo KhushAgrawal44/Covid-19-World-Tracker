@@ -1,4 +1,4 @@
-import 'mapbox-gl/dist/mapbox-gl.css';
+//import 'mapbox-gl/dist/mapbox-gl.css';
 function updateMap(){
   fetch("https://corona.lmao.ninja/v2/countries")
   .then(response => response.json())
@@ -55,7 +55,7 @@ function updateMap(){
               new mapboxgl.Marker({
               draggable: false,
               color:color,
-              pitchAlignment:auto
+              pitchAlignment:map
 
                })
      .setLngLat([longitude,lattitude])
