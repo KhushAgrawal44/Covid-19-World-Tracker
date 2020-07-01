@@ -55,7 +55,9 @@ function updateMap(){
               new mapboxgl.Marker({
               draggable: false,
               color:color,
-              pitchAlignment:map
+              anchor:"bottom"
+
+
 
                })
      .setLngLat([longitude,lattitude])
