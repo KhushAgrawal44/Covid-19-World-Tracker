@@ -1,4 +1,4 @@
-
+import 'mapbox-gl/dist/mapbox-gl.css';
 function updateMap(){
   fetch("https://corona.lmao.ninja/v2/countries")
   .then(response => response.json())
@@ -9,7 +9,7 @@ function updateMap(){
       const longitude=element.countryInfo.long;
 
     const deathrate=((element.deaths/element.cases)*100).toFixed(2);
-  
+
       var popup = new mapboxgl.Popup()
       .setHTML(`<table>
         <caption><h2>${element.country}</h2></caption>
@@ -54,7 +54,8 @@ function updateMap(){
 
               new mapboxgl.Marker({
               draggable: false,
-              color:color
+              color:color,
+              pitchAlignment:auto
 
                })
      .setLngLat([longitude,lattitude])
