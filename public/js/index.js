@@ -35,6 +35,18 @@ function updateMap(){
         <tr>
         <th><h3>Population :</h4></th><td><h4>${element.population}</h4></td>
         </tr>
+        <tr>
+        <th style="color:red;">Red :</th><td>Death Rate >3</td>
+        </tr>
+        <tr>
+        <th style="color:orange;">Orange :</th><td>2<=Death Rate<=3</td>
+        </tr>
+        <tr>
+        <th style="color:yellow;">Yellow :</th><td>1<=Death Rate<2</td>
+        </tr>
+        <tr>
+        <th style="color:green;">Green :</th><td>Death Rate<1</td>
+        </tr>
         </table>`);
 
         if(deathrate > 3)

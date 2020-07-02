@@ -9,9 +9,28 @@
       {
         text-align: center;
         font-family: serif;
+        background-color: #abc2e8;
+        color: #1b6ca8;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+      }
+      .note
+      {
+        text-align: center;
+        background-color: #ff847c;
+        font-family: cursive;
+        color: white;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
       }
       #map
       {
+        margin-left: auto;
+        margin-right: auto;
         border: 2px solid black;
         border-radius: 20px;
       }
@@ -19,17 +38,40 @@
         {
           background-color: #e0dede;
           text-align: center;
+          margin-left: auto;
+          margin-right: auto;
           height: auto;
+          bottom: 0;
+          position:sticky;
         }
         .footer-text
         {
           padding: 10px;
+          text-align: center;
+        }
+        @media only screen and (max-width:768px)
+        {
+          .head
+          {
+            text-align: center;
+            font-family: serif;
+            background-color: #abc2e8;
+            color: #1b6ca8;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+          }
         }
       </style>
    </head>
     <body>
       <h1 class="head"><u>Live Covid-19 Tracker</u></h1>
-     <div id='map' style='width: 100vw; height: 80vh;'></div>
+      <div class="note ">
+        <p>While viewing on mobile , Please view map in full screen mode or landscape mode,
+         for better and perfect experience.</p>
+      </div>
+     <div id='map' style='width: 90vw; height: 80vh;'></div>
      <footer><div class="footer-text">© 2020 by KHUSH AGRAWAL </div></footer>
     </body>
 
@@ -41,8 +83,8 @@
   var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
-  zoom:4,
- minZoom: 4
+  zoom:2,
+
    });
    map.scrollZoom.disable();
    map.addControl(new mapboxgl.FullscreenControl());
