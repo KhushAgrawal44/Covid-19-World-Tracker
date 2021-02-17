@@ -34,10 +34,11 @@
 }
   footer
   {
-    background-color: #e0dede;
+    background-color: #f3c623;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
     height: auto;
     bottom: 0;
     position:sticky;
@@ -47,6 +48,30 @@
     padding: 10px;
     text-align: center;
   }
+
+ .table
+ {
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ .table th
+ {
+     padding: 10px;
+     border: 3px solid #654062;
+     position:sticky; // this is for all Safari (Desktop & iOS), not for Chrome
+     position: sticky;
+     top: 0;
+     z-index: 5;
+     background: #204051;
+     color: white;
+ }
+ .table td
+{
+  border: 2px solid #204051;
+  background: #84a9ac;
+
+}
   @media only screen and (max-width:768px)
   {
     .head
@@ -66,7 +91,7 @@
       text-align: center;
       font-size: 15px;
       background-color: #ff847c;
-      
+
       color: white;
       width: 90%;
       margin-left: auto;

@@ -11,6 +11,10 @@ app.get("/",function(req,res){
 
 })
 
+app.get("/india",function(req,res){
+  res.render("india");
+})
+
 
 app.listen(process.env.PORT || 3000,function(){
   console.log("server started");
